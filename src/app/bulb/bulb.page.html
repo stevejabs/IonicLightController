@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bulb</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="colorPickerSquare" [style.background-color]="colorPickerHexColor"></div>
+
+  <color-hue-picker 
+    height="32"
+    (onChangeComplete)="colorChangeComplete($event)"
+  ></color-hue-picker>
+  
+  <ion-button size="large" (click)="setColor()">Set Color</ion-button>
+</ion-content>
